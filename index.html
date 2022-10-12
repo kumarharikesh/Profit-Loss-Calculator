@@ -49,36 +49,42 @@
     <header>
       <h1>Stock Profit & Loss Calculator</h1>
     </header>
-    <main>
-      <label class="input-label" for="initial-price">
-        Intial Price
-        <input
-          class="input"
-          type="text"
-          id="initial-price"
-          placeholder="Enter Initial Price Here"
-      /></label>
-      <label class="input-label" for="stocks-quantity">
-        Quantity of Stocks
-        <input
-          class="input"
-          type="text"
-          id="stocks-quantity"
-          placeholder="Enter the Number of Stocks bought"
-        />
-      </label>
-      <label class="input-label" for="current-price"
-        >Current Price
-        <input
-          class="input"
-          type="text"
-          id="current-price"
-          placeholder="Enter the Current Price of the stocks"
-      /></label>
 
-      <button id="submit-btn" class="btn-check">Tell Me!!</button>
-      <div id="output-box" class="output"></div>
-    </main>
+    <form class="calculate-profit-form" id="calculate-profit-form" action="">
+
+        <div class="label-input-container">
+
+            <div>
+                <label class="input-label" for="initial-price">Intial Price:</label>
+                <input class="input input-text" type="text" id="initial-price" placeholder="Enter Initial Price Here" required/>
+            </div>  
+    
+            <div>
+                <label class="input-label" for="stocks-quantity">Quantity of Stocks:</label>
+                <input class="input input-text" type="text" id="stocks-quantity" placeholder="Enter the Number of Stocks bought" required/>
+            </div> 
+    
+            <div>
+                <label class="input-label" for="current-price">Current Price:</label>
+                <input class="input input-text" type="text" id="current-price" placeholder="Enter the Current Price of the stocks" required/>
+            </div> 
+
+        </div>
+
+        
+
+        <div id="flexbox">
+            <div >
+                <button class="btn-check" id="submit" type="submit">Calculate</button>
+            </div>
+            <div >
+                <button class="btn-check" id="clear" type="reset">Clear All</button>
+            </div>
+        </div>
+
+      <h3><textarea class="output" id="output" type="text" placeholder="Output will be shown here..." readonly></textarea></h3>
+
+    </form>
 
     <footer class="footer">
       <div class="footer-header">Connect with me</div>
